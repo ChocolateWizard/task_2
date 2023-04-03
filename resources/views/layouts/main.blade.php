@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Filmoteka</title>
+    <title>Cinemania</title>
     @vite('resources/css/app.css')
 </head>
 
@@ -19,9 +19,9 @@
                             alt="Filmoteka_logo" />
                     </a>
                 </li>
-                <li class="md:ml-16 mt-3 md:mt-0"><a href="#" class="hover:text-mellon-primary">Filmovi</a></li>
-                <li class="md:ml-6 mt-3 md:mt-0"><a href="#" class="hover:text-mellon-primary">Serije</a></li>
-                <li class="md:ml-6 mt-3 md:mt-0"><a href="#" class="hover:text-mellon-primary">Glumci</a></li>
+                <li class="md:ml-16 mt-3 md:mt-0"><a href="#" class="hover:text-mellon-primary">Movies</a></li>
+                <li class="md:ml-6 mt-3 md:mt-0"><a href="#" class="hover:text-mellon-primary">TV Shows</a></li>
+                <li class="md:ml-6 mt-3 md:mt-0"><a href="#" class="hover:text-mellon-primary">Actors</a></li>
             </ul>
             <div class="flex flex-col md:flex-row items-center">
                 <div class="relative mt-3 md:mt-0">

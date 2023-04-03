@@ -16,7 +16,7 @@
                     <span class="mx-2">|</span>
                     <span>20 feb, 2020</span>
                     <span class="mx-2">|</span>
-                    <span>Triller, Drama, Tragedija</span>
+                    <span>Thriller, Drama, Tragedy</span>
                 </div>
                 <p class="text-onyx-contrast mt-8">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, impedit maiores ex nam aliquid, vitae
@@ -24,11 +24,11 @@
                     excepturi nostrum?
                 </p>
                 <div class="mt-12">
-                    <h4 class="text-onyx-contrast font-semibold">Istaknute licnosti</h4>
+                    <h4 class="text-onyx-contrast font-semibold">Featured Crew</h4>
                     <div class="flex mt-4">
                         <div>
                             <div>Bong Joon-ho</div>
-                            <div class="text-sm text-onyx-contrast">Scenario, Reziser, Prica</div>
+                            <div class="text-sm text-onyx-contrast">Scenario, Director, Story</div>
                         </div>
                         <div class="ml-8">
                             <div>Han Jin-won</div>
@@ -44,7 +44,7 @@
                             <path
                                 d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z" />
                         </svg>
-                        <span class="ml-2">Pokreni trejler</span>
+                        <span class="ml-2">Play trailer</span>
                     </button>
                 </div>
             </div>

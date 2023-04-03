@@ -3,8 +3,8 @@
 @section('content')
     <div class="container mx-auto px-4 pt-16">
         <div class="popular-movies">
-            <h2 class="uppercase tracking-wider text-mellon-primary text-lg font-semibold">Hit filmovi</h2>
-            {{-- Popularni filmovi --}}
+            <h2 class="uppercase tracking-wider text-mellon-primary text-lg font-semibold">Popular movies</h2>
+            {{-- Popular movies --}}
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                 <div class="mt-8">
                     <a href="#">
@@ -21,9 +21,9 @@
                             </svg>
                             <span class="ml-1">85%</span>
                             <span class="mx-2">|</span>
-                            <span>20 feb, 2020</span>
+                            <span>20 Feb, 2020</span>
                         </div>
-                        <div class="text-gray-400 text-sm">Triller, Drama, Tragedija</div>
+                        <div class="text-gray-400 text-sm">Thriller, Drama, Tragedy</div>
                     </div>
                 </div>
                 <div class="mt-8">
@@ -208,10 +208,10 @@
                 </div>
             </div>
         </div>
-        {{-- Kraj popularnih filmova --}}
-        {{-- Aktuelni filmovi --}}
+        {{-- End of popular movies --}}
+        {{-- Current movies --}}
         <div class="now-playing-movies py-24">
-            <h2 class="uppercase tracking-wider text-mellon-primary text-lg font-semibold">Aktuelni</h2>
+            <h2 class="uppercase tracking-wider text-mellon-primary text-lg font-semibold">Current movies</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                 <div class="mt-8">
                     <a href="#">
@@ -230,7 +230,7 @@
                             <span class="mx-2">|</span>
                             <span>20 feb, 2020</span>
                         </div>
-                        <div class="text-gray-400 text-sm">Triller, Drama, Tragedija</div>
+                        <div class="text-gray-400 text-sm">Thriller, Drama, Tragedy</div>
                     </div>
                 </div>
                 <div class="mt-8">
@@ -415,7 +415,7 @@
                 </div>
             </div>
         </div>
-        {{-- Kraj aktuelnih filmova --}}
+        {{-- End of current movies --}}
 
     </div>
 @endsection
