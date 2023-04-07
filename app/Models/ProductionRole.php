@@ -20,8 +20,8 @@ class ProductionRole extends Model
     ];
 
 
-    public function productionRoles(): BelongsToMany
+    public function people(): BelongsToMany
     {
-        return $this->belongsToMany(ProductionRole::class, 'people_production_roles', 'production_role_id', 'person_id');
+        return $this->belongsToMany(Person::class, 'people_production_roles', 'production_role_id', 'person_id');
     }
 }
