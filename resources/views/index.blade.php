@@ -27,7 +27,6 @@
                 <x-movie-card />
                 <x-movie-card />
                 <x-movie-card />
-
             </div>
         </div>
         {{-- End of current movies --}}
