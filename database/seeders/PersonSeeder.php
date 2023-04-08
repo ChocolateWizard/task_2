@@ -29,7 +29,7 @@ class PersonSeeder extends Seeder
         foreach ($data as $key => $value) {
             Person::create($value);
         }
-        Person::factory(10)->create();
+        Person::factory(20)->create();
     }
     private function defineData()
     {
