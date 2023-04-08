@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             MovieSeeder::class,
             PersonSeeder::class,
+            PivotSeeder::class
         ]);
     }
 }
