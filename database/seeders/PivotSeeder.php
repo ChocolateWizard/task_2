@@ -31,14 +31,16 @@ class PivotSeeder extends Seeder
      */
     public function run(): void
     {
+        $this->command->info('Seeding pivot tables...');
         $this->usersMoviesTable();
         $this->moviesGenresTable();
         $this->peopleQualificationsTable();
+        $this->command->info('Seeding pivot tables finished!');
     }
 
     private function usersMoviesTable()
     {
-        $this->command->info('Seeding user_movies pivot table...');
+        $this->command->info('  '.'Seeding user_movies pivot table...');
         DB::table('user_movies')->delete();
         $userIds = User::select('id')->orderBy('id')->get();
         $movieIds = Movie::select('id');
@@ -54,11 +56,11 @@ class PivotSeeder extends Seeder
                 );
             }
         }
-        $this->command->info('Seeding finished');
+        $this->command->info('  '.'Seeding user_movies table finished.');
     }
     private function moviesGenresTable()
     {
-        $this->command->info('Seeding movie_genres pivot table...');
+        $this->command->info('  '.'Seeding movie_genres pivot table...');
         DB::table('movie_genre')->delete();
         $movieIds = Movie::select('id')->orderBy('id')->get();
         $genreIds = Genre::select('id');
@@ -74,11 +76,11 @@ class PivotSeeder extends Seeder
                 );
             }
         }
-        $this->command->info('Seeding finished');
+        $this->command->info('  '.'Seeding movie_genres table finished.');
     }
     private function peopleQualificationsTable()
     {
-        $this->command->info('Seeding people_production_roles pivot table...');
+        $this->command->info('  '.'Seeding people_production_roles pivot table...');
         DB::table('people_production_roles')->delete();
         $peopleIds = Person::select('id')->orderBy('id')->get();
         $roleIds = ProductionRole::select('id');
@@ -94,6 +96,6 @@ class PivotSeeder extends Seeder
                 );
             }
         }
-        $this->command->info('Seeding finished');
+        $this->command->info('  '.'Seeding people_production_roles table finished.');
     }
 }
