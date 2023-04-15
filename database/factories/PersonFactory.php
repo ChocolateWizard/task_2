@@ -16,10 +16,12 @@ class PersonFactory extends Factory
      */
     public function definition(): array
     {
+        $firstName=$this->faker->firstName();
+        $lastName=$this->faker->lastName();
         return [
-            'first_name'=>$this->faker->firstName(),
-            'last_name'=>$this->faker->lastName(),
-            'profile_photo_url'=>$this->faker->imageUrl(1000,1500),
+            'first_name'=>$firstName,
+            'last_name'=>$lastName,
+            'profile_photo_url'=>$this->faker->imageUrl(1000,1500, $firstName.' '.$lastName),
             'is_star'=>$this->faker->boolean(70)
         ];
     }
