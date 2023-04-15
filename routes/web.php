@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\FrontEndController;
+use App\Http\Controllers\MovieController;
+use App\Models\Movie;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
 
-Route::get('/movie', function () {
-    return view('show');
-});
+Route::get('/', [FrontEndController::class,'home'])->name('home');
+
+Route::get('/movie/{movie}', [FrontEndController::class,'show']);

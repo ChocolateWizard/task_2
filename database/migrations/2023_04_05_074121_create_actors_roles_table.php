@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('actors_roles', function (Blueprint $table) {          
+        Schema::create('acting_roles', function (Blueprint $table) {          
             $table->bigInteger('production_id', false, true);
             $table->bigInteger('order_num', false, true);
             $table->string('role');
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('actors_roles');
+        Schema::dropIfExists('acting_roles');
     }
 };

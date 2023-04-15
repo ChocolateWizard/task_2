@@ -83,7 +83,7 @@ class ProductionInfoSeeder extends Seeder
                     $numOfActorRoles = $this->getNumberOfRolesPerActor($this->minNumberOfRolesPerActor, $this->maxNumberOfRolesPerActor);
                     //insert random roles for current actor
                     for ($i = 0; $i < $numOfActorRoles; $i++) {
-                        DB::table('actors_roles')->insert(
+                        DB::table('acting_roles')->insert(
                             [
                                 'production_id' => $id,
                                 'order_num' => ($i + 1),

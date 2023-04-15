@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('actors_roles', function (Blueprint $table) {
+        Schema::table('acting_roles', function (Blueprint $table) {
             $table->index('production_id', 'UX_actors_roles_production_id_actingrole_production_id');
             $table->foreign('production_id', 'FK_actors_roles_production_id_actingrole_production_id')->references('id')->on('production')->onUpdate('cascade')->onDelete('cascade');          
         });
@@ -22,7 +22,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('actors_roles', function (Blueprint $table) {
+        Schema::table('acting_roles', function (Blueprint $table) {
             $table->dropForeign('FK_actors_roles_production_id_actingrole_production_id');
             $table->dropIndex('UX_actors_roles_production_id_actingrole_production_id');          
         });
