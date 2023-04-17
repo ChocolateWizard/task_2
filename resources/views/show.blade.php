@@ -1,16 +1,4 @@
-@extends('layouts.main')
-
-@section('content')
-    @php
-        
-        $genresAsString = $movie->genresAsString();
-        $directorsAsString = $movie->directorsAsString();
-        $writersAsString = $movie->writersAsString();
-        $actorsAsString = $movie->actorsAsString();
-        
-        $actors = $movie->actors->all();
-        
-    @endphp
+<x-layout-main>
     <div class="movie-info border-b border-onyx-tint">
         <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row">
             <img class="w-64 md:w-96"
@@ -46,19 +34,6 @@
                     </div>
                 </div>
 
-                {{-- <div class="mt-12">
-                    <h4 class="text-onyx-contrast font-semibold">Featured Crew</h4>
-                    <div class="flex mt-4">
-                        <div>
-                            <div>Bong Joon-ho</div>
-                            <div class="text-sm text-onyx-contrast">Scenario, Director, Story</div>
-                        </div>
-                        <div class="ml-8">
-                            <div>Han Jin-won</div>
-                            <div class="text-sm text-onyx-contrast">Scenario</div>
-                        </div>
-                    </div>
-                </div> --}}
                 <div class="mt-12">
                     <button
                         class="flex items-center bg-mellon-primary text-onyx-tint rounded font-semibold px-5 py-4 hover:bg-mellon-shade transition ease-in-out duration-150">
@@ -87,25 +62,4 @@
             </div>
         </div>
     </div>
-    {{-- Movie cast --}}
-    {{-- Movie images --}}
-    {{-- <div class="movie-images border-b border-onyx-tint">
-        <div class="container mx-auto px-4 py-16">
-            <h2 class="text-4xl font-semibold">Images</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">              
-                <div class="mt-8">
-                    <a href="#">
-                        <img class="h-movie-image hover:opacity-75 transition ease-in-out duration-150"
-                            src="{{ asset('storage/actors/Willem_Dafoe.jpg') }}" alt="Willem_Dafoe.jpg">
-                    </a>
-                </div>
-                <div class="mt-8">
-                    <a href="#">
-                        <img class="h-movie-image hover:opacity-75 transition ease-in-out duration-150"
-                            src="{{ asset('storage/actors/Robert_Pattinson.jpg') }}" alt="Robert_Pattinson.jpg">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-@endsection
+</x-layout-main>

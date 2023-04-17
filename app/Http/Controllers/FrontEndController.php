@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Country;
 use App\Models\Movie;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -19,6 +20,28 @@ class FrontEndController extends Controller
     }
     public function show(Movie $movie)
     {
-        return view('show', ['movie' => $movie]);
+        $genresAsString = $movie->genresAsString();
+        $directorsAsString = $movie->directorsAsString();
+        $writersAsString = $movie->writersAsString();
+        $actorsAsString = $movie->actorsAsString();
+
+        $actors = $movie->actors->all();
+        return view('show', [
+            'movie' => $movie,
+            'genresAsString' => $genresAsString,
+            'directorsAsString' => $directorsAsString,
+            'writersAsString' => $writersAsString,
+            'actorsAsString' => $actorsAsString,
+            'actors' => $actors
+        ]);
+    }
+    public function register()
+    {
+        $countries = Country::all();
+        return view('users.register', ['countries' => $countries]);
+    }
+    public function login()
+    {
+        return view('users.login');
     }
 }

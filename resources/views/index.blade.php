@@ -1,6 +1,4 @@
-@extends('layouts.main')
-
-@section('content')
+<x-layout-main>
     <div class="container mx-auto px-4 pt-16">
         <div class="popular-movies">
             <h2 class="uppercase tracking-wider text-mellon-primary text-lg font-semibold">Popular movies</h2>
@@ -34,4 +32,4 @@
         {{-- End of current movies --}}
 
     </div>
-@endsection
+</x-layout-main>

@@ -36,24 +36,42 @@
                     </div>
                 </div>
                 <div class="md:ml-4 mt-3 md:mt-0 flex flex-col md:flex-row">
-                    {{-- <a href="#"><img src="{{ asset('storage/icons/Default_profile_photo.png') }}" alt="profilna"
-                            class="rounded-full w-8 h-8"></a> --}}
+                    <ul class="flex flex-col md:flex-row items-center">
+                        @auth
                             <li>
-                                <a href="/register" class="hover:text-laravel"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
-                                    <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-                                  </svg> Register</a>
+                                {{ auth()->user()->username }}
                             </li>
                             <li>
-                                <a href="/login" class="hover:text-laravel"><i class="fa-solid fa-arrow-right-to-bracket"></i>
+                                <a href="#"><img src="{{ asset(auth()->user()->profile_photo_url) }}"
+                                        alt="profile_photo" class="rounded-full w-8 h-8"></a>
+                            </li>
+                            <li>
+                                <form action="/logout" method="POST">
+                                @csrf
+                                <button type="submit">
+                                    logout
+                                </button>
+                                </form>
+                            </li>
+                        @else
+                            <li>
+                                <a href="/register" class="hover:text-laravel">
+                                    Register</a>
+                            </li>
+                            <li>
+                                <a href="/login" class="hover:text-laravel"><i
+                                        class="fa-solid fa-arrow-right-to-bracket"></i>
                                     Login</a>
                             </li>
+                        @endauth
+                    </ul>
                 </div>
-
             </div>
         </div>
     </nav>
-    @yield('content')
+    <main>
+        {{ $slot }}
+    </main>
 </body>
 
 </html>

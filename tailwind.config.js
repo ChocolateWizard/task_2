@@ -8,6 +8,18 @@ module.exports = {
     theme: {
         extend: {
             colors: {
+                primary: {
+                    50: "#eff6ff",
+                    100: "#dbeafe",
+                    200: "#bfdbfe",
+                    300: "#93c5fd",
+                    400: "#60a5fa",
+                    500: "#3b82f6",
+                    600: "#2563eb",
+                    700: "#1d4ed8",
+                    800: "#1e40af",
+                    900: "#1e3a8a",
+                },
                 mellon: {
                     primary: "#DBA506",
                     contrast: "#000000",
@@ -16,7 +28,7 @@ module.exports = {
                 },
                 onyx: {
                     primary: "#282C2F",
-                    primary: {               
+                    primary: {
                         0: "#000000",
                         5: "#0c0d0e",
                         10: "#171a1c",
@@ -54,6 +66,42 @@ module.exports = {
                 "movie-cast-profile": "300px",
                 "movie-image": "400px",
             },
+        },
+        fontFamily: {
+            body: [
+                "Inter",
+                "ui-sans-serif",
+                "system-ui",
+                "-apple-system",
+                "system-ui",
+                "Segoe UI",
+                "Roboto",
+                "Helvetica Neue",
+                "Arial",
+                "Noto Sans",
+                "sans-serif",
+                "Apple Color Emoji",
+                "Segoe UI Emoji",
+                "Segoe UI Symbol",
+                "Noto Color Emoji",
+            ],
+            sans: [
+                "Inter",
+                "ui-sans-serif",
+                "system-ui",
+                "-apple-system",
+                "system-ui",
+                "Segoe UI",
+                "Roboto",
+                "Helvetica Neue",
+                "Arial",
+                "Noto Sans",
+                "sans-serif",
+                "Apple Color Emoji",
+                "Segoe UI Emoji",
+                "Segoe UI Symbol",
+                "Noto Color Emoji",
+            ],
         },
     },
     plugins: [],
