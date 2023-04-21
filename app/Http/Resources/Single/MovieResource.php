@@ -17,6 +17,10 @@ class MovieResource extends JsonResource
         $port = Config::get('constants.server.port');
         $protocol = Config::get('constants.server.protocol');
         $cover_url = (str_starts_with($this->cover_url, 'storage') === true ?  $protocol . '://' . $ip . ':' . $port . '/' . $this->cover_url : $this->cover_url);
+        $actors = $this->resource->actors;
+        foreach ($actors as $actor) {
+            $actor->roles = (ActingRoleResource::collection($actor->actingRolesInMovie($this->resource)));
+        }
         return [
             'id' => $this->id,
             'title' => $this->title,
@@ -27,7 +31,7 @@ class MovieResource extends JsonResource
             'genres' => (GenreResource::collection($this->genres)),
             'directors' => (PersonResource::collection($this->directors)),
             'writers' => (PersonResource::collection($this->writers)),
-            'actors' => (PersonResource::collection($this->actors))
+            'actors' => (PersonResource::collection($actors))
         ];
     }
 }
