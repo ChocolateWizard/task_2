@@ -1,9 +1,7 @@
 <?php
 
-use App\Http\Controllers\FrontEndController;
-use App\Http\Controllers\MovieController;
-use App\Http\Controllers\UserController;
-use App\Models\Movie;
+use App\Http\Controllers\Web\FrontEndController;
+use App\Http\Controllers\Web\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*

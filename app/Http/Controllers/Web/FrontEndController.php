@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
+use App\Http\Controllers\Controller;
 use App\Models\Country;
 use App\Models\Movie;
 use Illuminate\Http\Request;
@@ -14,7 +15,7 @@ class FrontEndController extends Controller
     public function home()
     {
         $popularMovies = MovieController::getPopularMovies(80, 10);
-        $currentMovies = MovieController::getCurrentMovies(1960, 10);
+        $currentMovies = MovieController::getCurrentMovies(1960, 10);       
 
         return view('index', ['popularMovies' => $popularMovies, 'currentMovies' => $currentMovies]);
     }
