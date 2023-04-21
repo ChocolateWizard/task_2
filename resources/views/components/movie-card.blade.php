@@ -19,19 +19,7 @@
         </div>
         {{-- <div class="text-gray-400 text-sm">Thriller, Drama, Tragedy</div> --}}
         <div class="text-gray-400 text-sm">
-            @php
-                $genres='';
-                $noComma=true;
-                foreach ($movie->genres as $genre) {
-                    if($noComma==true){
-                        $genres=$genres.$genre->name;
-                        $noComma=false;
-                        continue;
-                    }
-                        $genres=$genres.', '.$genre->name;              
-                }
-                echo $genres;
-            @endphp            
+            {{ $movie->genresAsString() }}         
         </div>
     </div>
 </div>
