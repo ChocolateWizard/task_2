@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Web;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -39,7 +40,7 @@ class UserController extends Controller
         ]);
 
         //Hash password
-        $formFields['password'] = bcrypt($formFields['password']);
+        $formFields['password'] =  Hash::make($formFields['password']);
 
         //Create user
         $user = User::create($formFields);

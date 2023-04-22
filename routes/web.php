@@ -28,10 +28,10 @@ Route::get('/register',[FrontEndController::class,'register'])->middleware('gues
 Route::get('/login',[FrontEndController::class,'login'])->middleware('guest');
 
 //create new user
-Route::post('/users',[UserController::class,'store']);
+Route::post('/users',[UserController::class,'store'])->middleware('guest');
 
 //login user
-Route::post('/users/login',[UserController::class,'login']);
+Route::post('/users/login',[UserController::class,'login'])->middleware('guest');
 
 //logout user
-Route::post('/logout',[UserController::class,'logout']);
+Route::post('/logout',[UserController::class,'logout'])->middleware('auth');

@@ -8,6 +8,7 @@ use Database\Factories\CountryFactory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
@@ -41,7 +42,7 @@ class UserSeeder extends Seeder
                 'last_name' => 'Markovic',
                 'username' => 'a',
                 'email' => 'marko@gmail.com',
-                'password' => 'a'
+                'password' => Hash::make('a')
             ]
         ];
     }
