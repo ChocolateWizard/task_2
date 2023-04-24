@@ -146,7 +146,8 @@ class MovieController extends Controller
      */
     public function search($title)
     {
-        return Movie::where('title', 'like', '%' . $title . '%')->get();
+        $movies= Movie::where('title', 'like', '%' . $title . '%')->get();
+        return new MovieCollection($movies);
     }
 
     //show popular movies
